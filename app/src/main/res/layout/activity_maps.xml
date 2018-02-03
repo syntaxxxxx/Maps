@@ -1,0 +1,115 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fiqri.aboutmapapp.MapsActivity">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/locationAwal"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@android:drawable/editbox_background_normal"
+            android:drawableLeft="@android:drawable/ic_dialog_map"
+            android:drawablePadding="10dp"
+            android:editable="false"
+            android:hint="Your Location" />
+
+        <EditText
+            android:id="@+id/locationAkhir"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@android:drawable/editbox_background_normal"
+            android:drawableLeft="@android:drawable/ic_dialog_map"
+            android:drawablePadding="10dp"
+            android:editable="false"
+            android:hint="Your Destination"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_above="@+id/inear"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <Button
+            android:onClick="normal"
+            android:id="@+id/btnNormal"
+            android:layout_weight="1"
+            android:hint="Normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:onClick="terrain"
+            android:id="@+id/btnTerrain"
+            android:layout_weight="1"
+            android:hint="Terrain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:onClick="satelit"
+            android:id="@+id/btnSatelit"
+            android:layout_weight="1"
+            android:hint="Satelit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:onClick="hybrid"
+            android:id="@+id/btnHybrid"
+            android:layout_weight="1"
+            android:hint="Hybrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/inear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="1dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:padding="7dp">
+
+        <TextView
+            android:id="@+id/textJarak"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Jarak : 50 KM"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/textWaktu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Waktu : 50:35 M"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+</RelativeLayout>
